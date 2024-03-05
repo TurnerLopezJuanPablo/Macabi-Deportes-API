@@ -3,6 +3,7 @@
 # INDEX
 
 - [About the Project](https://github.com/TurnerLopezJuanPablo/Macabi-Deportes-API?tab=readme-ov-file#about-the-project)
+- [Database Diagram](https://github.com/TurnerLopezJuanPablo/Macabi-Deportes-API?tab=readme-ov-file#database-diagram)
 - [NPM Packages](https://github.com/TurnerLopezJuanPablo/Macabi-Deportes-API?tab=readme-ov-file#npm-packages)
 - [Steps to Set Up and Run the Project](https://github.com/TurnerLopezJuanPablo/Macabi-Deportes-API?tab=readme-ov-file#steps-to-set-up-and-run-the-project)
 
@@ -14,7 +15,7 @@ Macabi has sports, each with its own category where different members are regist
 ## Database Diagram:
 
 <p align="center">
-  <img src="https://github.com/TurnerLopezJuanPablo/Macabi-Deportes-Front/blob/main/SoftwareMacabiImages/SoftwareMacabi%20(5).png" alt="Users List">
+  <img src="https://github.com/TurnerLopezJuanPablo/Macabi-Deportes-API/blob/main/DER%20PF-Dise%C3%B1o%20Final%20BD.jpg" alt="Database Diagram">
 </p>
 
 > [!TIP]
