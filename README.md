@@ -127,16 +127,74 @@ Macabi has sports, each with its own category where different members are regist
 </p>
 
 ## Npm packages
-- @vitejs/plugin-vue@4.4.0
-- axios@1.6.1
--  bootstrap@5.3.2
--  moment@2.29.4
--  pinia@2.1.7
--  vite@4.5.2
--  vue-router@4.2.5
--  vue@3.3.4
+- bcrypt@5.1.1
+- cookie-parser@1.4.6
+- cors@2.8.5
+- dotenv@16.3.1
+- express@4.18.2
+- jsonwebtoken@9.0.2
+- moment@2.29.4
+- mysql2@3.6.1
+- nodemailer@6.9.11
+- sequelize@6.33.0
 
 # Steps to Set Up and Run the Project:
 
 1. Run `npm i` or `npm install` in the <img alt="Visual Studio Code" width="15px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" style="padding: 15px;" /> Visual Studio Code terminal.
-2. 
+2. Create a file named `.env` and complete with the correct data. See example in `.env.sample`
+```sh
+# Configuration File
+
+# Server Port
+SERVER_PORT= "5000"
+
+# Database Name
+DB_NAME= "database_name"
+
+# Database Username
+DB_USERNAME= "database_username"
+
+# Database Password
+DB_PASSWORD = "database_password"
+
+# Database Host
+DB_HOST = "localhost"
+
+# Database Dialect (e.g., mysql, postgres, etc.)
+DB_DIALECT= "mysql"
+
+# Database Port
+DB_PORT= "3306"
+
+# Secret Key for JWT
+JWT_SECRET="jwt_secret_key"
+
+# CORS Origin
+CORS_ORIGIN = "http://localhost:5173"
+
+# Email and Password for Email Service
+EMAIL_USER= "your_email@gmail.com"
+EMAIL_PASSWORD= "your_email_password"
+```
+
+> [!IMPORTANT]
+> The server port you choose is the same one you have to put in the `config/config.js` of [Macabi-Deportes-Front / config.js](https://github.com/TurnerLopezJuanPablo/Macabi-Deportes-Front?tab=readme-ov-file#steps-to-set-up-and-run-the-project) where it says `const apiUrl = 'http://localhost:8080';` to connect it with this project (8080 is the default server port).
+
+> [!IMPORTANT]
+> File `.env` section `CORS_ORIGIN = "http://localhost:5173"` you have to put the other project URL to avoid having CORS problems.
+
+3. **OPTIONAL:** Go to `index.js` line 51:
+```
+const port = parseInt(serverPort) || 8080;
+```
+Remember that 8080 is the default serverport but you can still put your own server port of your like in the `.env` file.
+
+4. **OPTIONAL:**  Go to `index.js` line 50:
+```
+let force = true;
+```
+The project comes with a folder called `seed` that contains some data to test the application. If the `FORCE` is set to `TRUE`, it means that every time the app is executed it will reset the database and reset all the tables. Set the `FORCE` to `FALSE` to avoid losing the data the next time you use the application.
+
+5. Execute `npm run start` in the terminal to launch the project locally.
+
+6. You will also need to have the other project running on your machine for the application to function properly. [Macabi-Deportes-Front](https://github.com/TurnerLopezJuanPablo/Macabi-Deportes-Front)
